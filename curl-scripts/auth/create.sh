@@ -1,5 +1,5 @@
 API="https://secure-oasis-82523.herokuapp.com"
-URL_PATH="/games"
+URL_PATH="/create"
 
 curl "${API}${URL_PATH}" \
   --include \

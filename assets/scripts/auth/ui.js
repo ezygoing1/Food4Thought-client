@@ -1,9 +1,7 @@
 'use strict'
 
 const store = require('../store')
-$('start-game').hide()
-$('change-password').hide()
-$('game-board').hide()
+$('#change-password').hide()
 
 const signUpSuccess = function (data) {
   $('#message').text('Signed up successfully')
@@ -27,8 +25,6 @@ const signInSuccess = function (response) {
   $('#sign-in').hide()
   $('#sign-up').hide()
   $('#change-password').show()
-  $('#start-game').show()
-  $('game-board').show()
 }
 
 const signInFailure = function (error) {
