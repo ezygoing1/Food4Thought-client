@@ -1,9 +1,9 @@
 'use strict'
 
-const getFormFields = require(`/Users/frederickwoodhouse/sei/projects/Food4Thought-client/lib/get-form-fields.js`)
+const getFormFields = require(`../../../lib/get-form-fields`)
 
-const api = require('/Users/frederickwoodhouse/sei/projects/Food4Thought-client/assets/scripts/auth/api.js')
-const ui = require('/Users/frederickwoodhouse/sei/projects/Food4Thought-client/assets/scripts/auth/ui.js')
+const api = require('./api')
+const ui = require('./ui')
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -43,12 +43,8 @@ const onChangePassword = function (event) {
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)
 }
-const authEvents = require('./auth/events')
-const gameEvents = require('./game/game-events')
 
 const addHandlers = () => {
-  authEvents.addHandlers()
-  gameEvents.addHandlers()
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
