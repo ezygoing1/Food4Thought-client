@@ -44,11 +44,10 @@ const onChangePassword = function (event) {
     .catch(ui.changePasswordFailure)
 }
 const authEvents = require('./auth/events')
-const gameEvents = require('./game/game-events')
 
 const addHandlers = () => {
   authEvents.addHandlers()
-  gameEvents.addHandlers()
+
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
