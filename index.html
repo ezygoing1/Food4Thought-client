@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1>Food 4 Thought</h1>
+      <h2> Tell Us How You Really Feel!</h2>
+      <p id="message" div= title></p>
+
+      <section>
+        <form id="sign-up" class='unauthenticated'>
+
+        <h2>Sign Up</h2>
+          <input type="email" name="credentials[email]" placeholder="email">
+          <input type="password" name="credentials[password]" placeholder="password">
+          <input type="password" name="credentials[password_confirmation]" placeholder="password confirmation">
+          <button type="submit">Sign Up</button>
+
+        </form>
+
+      </section>
+
+      <section>
+         <form id="sign-in" class='unauthenticated'>
+        <h2>Sign In</h2>
+        <input type="email" name="credentials[email]" placeholder="email">
+          <input type="password" name="credentials[password]" placeholder="password">
+          <button type="submit">Sign In</button>
+        </form>
+      </section>
+
+      <section>
+        <form id='change-password' class='authenticated'>
+      <h2>Change Password</h2>
+        <input placeholder="Old Password" type="text" name="password[old]">
+        <input placeholder="New Password" type="text" name="password[new]">
+        <input type="submit" value="Change password">
+      </form>
+    </section>
+    <section>
+       <form id="review" class='authenticated'>
+      <h2>Review</h2>
+      <input placeholder="Name of resturant" type="text">
+      <input placeholder="Location" type="text">
+      <input placeholder="Cuisine" type="text">
+      <input placeholder="Review" type="text">
+        <button type="submit">Tell us what you think</button>
+      </form>
+  </section>
+    <section>
+       <form id="sign-out" class='authenticated'>
+      <h2>Sign Out</h2>
+        <button type="submit">Sign Out</button>
+      </form>
+  </section>
+
+    </body>
+</html>
