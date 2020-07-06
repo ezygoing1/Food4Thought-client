@@ -2,6 +2,8 @@
 
 const store = require('../store')
 $('#change-password').hide()
+$('#sign-out').hide()
+$('#review').hide()
 
 const signUpSuccess = function (data) {
   $('#message').text('Signed up successfully')
@@ -19,12 +21,11 @@ const signUpFailure = function (error) {
 
 const signInSuccess = function (response) {
   console.log(response)
-  $('#message').text('Signed in successfully ' + response.user.email)
+  $('#message').text('Welcome ' + response.user.email)
   $('form').trigger('reset')
   store.user = response.user
-  $('#sign-in').hide()
-  $('#sign-up').hide()
-  $('#change-password').show()
+  $('.authenticated').show()
+  $('.unauthenticated').hide()
 }
 
 const signInFailure = function (error) {
@@ -38,9 +39,12 @@ const signOutSuccess = function () {
   $('#message').text('Signed out successfully')
   $('#message').removeClass()
   $('#message').addClass('success')
-  $('form').trigger('reset') // IMPORTANT
-  console.log('signOutSuccess ran and nothing was returned!')
   store.user = null // IMPORTANT
+  $('.authenticated').hide()
+  $('.unauthenticated').show()
+  $('form').trigger('reset') // IMPORTANT
+
+  console.log('signOutSuccess ran and nothing was returned!')
 }
 
 const signOutFailure = function (error) {

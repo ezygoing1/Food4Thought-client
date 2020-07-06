@@ -1,1 +1,19 @@
 @import '~bootstrap/scss/bootstrap';
+
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+body  {
+  //height: 100%;
+  background-image: url("public/austin-01.jpg");
+  background-repeat: no-repeat;
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}

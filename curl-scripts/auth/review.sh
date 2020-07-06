@@ -6,14 +6,5 @@ curl "${API}${URL_PATH}" \
   --request POST \
   --header "Content-Type: application/json" \
   --header "Authorization: Bearer ${TOKEN}" \
-  --data '{
-    "review": {
-      "name": "'"${NAME}"'",
-      "cuisine": "'"${CUISINE}"'",
-      "currentLocation": "'"${LOC}"'",
-      "review": "'"${REVIEW}"'"
-
-    }
-  }'
 
 echo
