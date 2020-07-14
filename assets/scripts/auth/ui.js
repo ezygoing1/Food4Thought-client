@@ -59,6 +59,7 @@ const changePasswordSuccess = function () {
   $('#message').removeClass()
   $('#message').addClass('success')
   console.log('changePasswordSuccess ran and nothing was returned!')
+  $('form').trigger('reset')
 }
 
 const changePasswordFailure = function (error) {
