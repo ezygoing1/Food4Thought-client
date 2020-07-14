@@ -10,6 +10,7 @@ const signUpSuccess = function (data) {
   $('#message').removeClass()
   $('#message').addClass('success')
   console.log('signUpSuccess ran. Data is :', data)
+  $('form').trigger('reset')
 }
 
 const signUpFailure = function (error) {
